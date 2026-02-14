@@ -12,6 +12,10 @@ Pakka Deals is a lightweight, logic-first decision support tool that helps India
 -   **Privacy Focused**: No tracking, no cookies, no affiliate bias.
 -   **Lightweight**: Built with vanilla HTML, CSS, and JavaScript.
 
+## 🎥 Demo
+
+[Watch Demo Video](https://drive.google.com/file/d/1weCGcZEHMTr8xlRfktQlw9_DCjGFtBTS/view?usp=sharing)
+
 ## 🛠️ Tech Stack
 
 -   **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
@@ -34,6 +38,11 @@ tink her/
 │   └── app.js        # (Alternative logic - currently unused)
 └── README.md         # Project documentation
 ```
+
+## 👥 Team
+
+-   **Aysha Afra**
+-   **Naksha Noushad**
 
 ## 🤝 Contributing
 
