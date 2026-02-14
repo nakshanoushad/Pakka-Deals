@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pakka Deals – Smart Buy Advisor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Pakka Deals</div>
+  <div class="nav-links">
+    <a href="#how">How it works</a>
+    <a href="#advisor">Advisor</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1 class="main-title">Pakka Deals</h1>
+  <p class="subtitle">Smart buying decisions without hype or ads</p>
+
+  <div class="advisor-box" id="advisor">
+    <h2>Smart Buy Advisor</h2>
+    <p class="advisor-sub">Decide where and when to buy any product</p>
+
+    <input type="text" id="product" placeholder="Enter product or brand (e.g. Nike shoes)" />
+
+    <select id="urgency">
+      <option value="wait">Can wait</option>
+      <option value="soon">Need soon</option>
+    </select>
+
+    <button onclick="analyze()">Analyze</button>
+
+    <div id="result" class="result hidden"></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="info-section">
+  <h2>How It Works</h2>
+  <ul>
+    <li>You enter a product or brand</li>
+    <li>Pakka Deals understands the category</li>
+    <li>Selects the most reliable platform</li>
+    <li>Uses historical sale patterns</li>
+    <li>Suggests Buy or Wait clearly</li>
+  </ul>
+</section>
+
+<!-- ADVISOR -->
+<section class="info-section">
+  <h2>Advisor Logic</h2>
+  <ul>
+    <li>No live prices</li>
+    <li>No scraping</li>
+    <li>No ads or sponsorship bias</li>
+    <li>Based on past sale calendars</li>
+    <li>Honest, logic-first decisions</li>
+  </ul>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="info-section">
+  <h2>About Pakka Deals</h2>
+  <p>
+    Pakka Deals is a lightweight decision-support website that helps users
+    decide the best platform and timing to buy products without tracking prices
+    or violating platform policies.
+  </p>
+</section>
+
+<footer>
+  © 2026 Pakka Deals • Built with logic 🧠
+</footer>
+
+<script>
+function analyze() {
+  const product = document.getElementById("product").value.toLowerCase();
+  const urgency = document.getElementById("urgency").value;
+  const result = document.getElementById("result");
+
+  let platform = "Amazon";
+  let sale = "Great Indian Festival";
+  let months = "October";
+  let decision = "WAIT";
+
+  if (product.includes("nike") || product.includes("fashion") || product.includes("shoes")) {
+    platform = "Myntra";
+    sale = "End-of-Season Sale";
+    months = "June & December";
+  }
+
+  if (urgency === "soon") {
+    decision = "BUY";
+  }
+
+  result.innerHTML = `
+    <h3>${decision}</h3>
+    <div class="grid">
+      <span>Best Platform:</span><span>${platform}</span>
+      <span>Recommended Sale:</span><span>${sale}</span>
+      <span>Best Month(s):</span><span>${months}</span>
+      <span>Confidence:</span><span class="high">High</span>
+    </div>
+    <p class="note">
+      Based on historical sale calendars — no scraping or live pricing.
+    </p>
+  `;
+
+  result.classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
